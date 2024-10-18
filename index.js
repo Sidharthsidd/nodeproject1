@@ -29,19 +29,19 @@ fs.readFile('./txt/start.txt','utf-8',(err,data)=>{
 
 //////////////////////
 //  server 
- const replaceTemplate=(temp,product)=>{
-    let output = temp.replace(/{%productName%}/g,product.productName);
-     output = temp.replace(/{%IMAGE%}/g,product.image);
-  output = temp.replace(/{%price%}/g,product.price);
-  output = temp.replace(/{%From%}/g,product.from);
-  output = temp.replace(/{%description%}/g,product.description);
-  output = temp.replace(/{%nutrients%}/g,product.nutrients);
-  output = temp.replace(/{%quantity%}/g,product.quantity); 
-output = temp.replace(/{%ID%}/g,product.id);
+const replaceTemplate = (temp, product) => {
+    let output = temp.replace(/{%productName%}/g, product.productName);
+    output = output.replace(/{%IMAGE%}/g, product.image);
+    output = output.replace(/{%price%}/g, product.price);
+    output = output.replace(/{%From%}/g, product.from);
+    output = output.replace(/{%description%}/g, product.description);
+    output = output.replace(/{%nutrients%}/g, product.nutrients);
+    output = output.replace(/{%quantity%}/g, product.quantity);
+    output = output.replace(/{%ID%}/g, product.id);
 
-if(!product.organic) output=output.replace(/{%NOT_ORGANIC%}/g,'not-organic')
-  return output;
- }
+    if (!product.organic) output = output.replace(/{%NOT_ORGANIC%}/g, 'not-organic');
+    return output;
+};
 
  const tempproduct=fs.readFileSync(`${__dirname}/templates/product.html`,'utf-8' );
  const tempcard=fs.readFileSync(`${__dirname}/templates/template-card.html`,'utf-8');
@@ -73,10 +73,10 @@ const server =http.createServer((req,res)=>{
 
     //api
     else if (pathname==='/api'){
-         fs.readFile(`${__dirname}/dev-data/data.json`,'utf-8',(err,data)=>{
-        const productdata=JSON.parse(data);
-        res.end(data);
-        res.writeHead(200,{'Content-Type':'application/json',
+        fs.readFile(`${__dirname}/dev-data/data.json`,'utf-8',(err,data)=>{
+            const productdata=JSON.parse(data);
+            res.end(data);
+            res.writeHead(200,{'Content-Type':'application/json',
         })
     })
 

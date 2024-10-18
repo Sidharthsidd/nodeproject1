@@ -75,9 +75,8 @@ const server =http.createServer((req,res)=>{
     else if (pathname==='/api'){
         fs.readFile(`${__dirname}/dev-data/data.json`,'utf-8',(err,data)=>{
             const productdata=JSON.parse(data);
+            res.writeHead(200,{'Content-Type':'application/json'})
             res.end(data);
-            res.writeHead(200,{'Content-Type':'application/json',
-        })
     })
 
 }

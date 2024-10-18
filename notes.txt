@@ -1,0 +1,30 @@
+what is a node js ?
+ans : nodejs is a javascript runtime build on google opens ource v8 javascript engine 
+
+when to use node js ?
+api with database behind it (preferably nosql)
+data streaming 
+realtime chat appllication 
+server-side web appllication
+
+don't use 
+applications with heavy server side processing (cpu-intensive)
+
+//require('fs') module / its is used to read and write the data from the file 
+* text =fs.readFileSync('./txt/input.txt','utf-8')   utf-8 to acccess the data from the file if dont put its returns the buffer bytes code 
+
+to write into the other folder 
+//fs.writeFileSync('file_path',variable) file is created automatically if you did not created .txt
+
+synchronous also called blocking code code waits before execution for the previous line 
+in asynchronous in order to make the code non blocking use asynchronous  
+
+so readFile is the asynchronous method jab tak the readfile function reads the file fully other code will execute and affter reading the file the node js console.log the readed file next
+
+//res.writeHead(404,{'Content-Type':'text/plain',
+            'my-own-header':'hello world',
+        })
+
+The custom header is likely used for experimental or informational purposes, and the client would be able to see it in the response headers when they inspect the network request.
+
+///res.end(data)   can send an object in the response

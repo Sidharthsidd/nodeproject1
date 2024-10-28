@@ -25,6 +25,30 @@ so readFile is the asynchronous method jab tak the readfile function reads the f
             'my-own-header':'hello world',
         })
 
-The custom header is likely used for experimental or informational purposes, and the client would be able to see it in the response headers when they inspect the network request.
+The custom header is likely used for experimental or informational purposes, and the client would be able to see it in the response headers when they inspect the network request.qA
 
 ///res.end(data)   can send an object in the response
+
+
+//we can make a our own module and export function and use that function in other module 
+* in nodejs  every single file is treated as a module 
+we shifted replacetemplate to the other folder by 'module.exports '=>this exports the function .and imported by require in index.jsas same name before
+
+
+introduction to npm
+//what is npm(node package manager) ? 
+Ans=>npm is a cammand line interface app taht automamtially coming in the nodejs which is used to install and manage the open source packages 
+
+//start new project use npm init =>creates a package.json file which all information of the project is stored
+
+
+//whatis dependencies 
+dependencies are the packages that are required by the project to run the project
+
+a simple dependencies is slugify =>A slug is a URL-friendly version of a string, typically used to create a cleaner, more readable link structure in URLs. In web development, slugs are commonly used to represent the title or name of a page or resource in the URL in a way that’s easy for both users and search engines to read.
+
+
+npm i nodemon --save-dev
+nodemon is the good package to restart a server whenever we change in the propject 
+
+//how to require third party modules 

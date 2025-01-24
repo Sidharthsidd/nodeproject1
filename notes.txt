@@ -4,8 +4,8 @@ ans : nodejs is a javascript runtime build on google opens ource v8 javascript e
 when to use node js ?
 api with database behind it (preferably nosql)
 data streaming 
-realtime chat appllication 
-server-side web appllication
+realtime chat application 
+server-side web application
 
 don't use 
 applications with heavy server side processing (cpu-intensive)
@@ -52,3 +52,12 @@ npm i nodemon --save-dev
 nodemon is the good package to restart a server whenever we change in the propject 
 
 //how to require third party modules 
+const slugify=require('slugify')
+
+Key Features of Slugify:
+Removes Special Characters: It removes special characters like punctuation marks and symbols.
+Replaces Spaces with Dashes (-): Spaces and other separator characters are replaced with dashes (or other specified characters).
+Lowercases the String: Converts the string to lowercase for consistency.
+Strips Unsupported Characters: Removes characters that might not work well in URLs (e.g., non-ASCII characters).
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
